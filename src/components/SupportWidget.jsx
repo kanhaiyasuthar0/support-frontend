@@ -9,11 +9,14 @@ export default function SupportWidget() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("https://your-render-api-url.com/submit-ticket", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        "https://support-sdk.onrender.com/submit-ticket",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }
+      );
       if (res.ok) setSubmitted(true);
     } catch (err) {
       alert("Failed to submit. Try again.");

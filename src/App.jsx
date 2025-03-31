@@ -1,4 +1,4 @@
-import SupportWidget from "./SupportWidget";
+import SupportWidget from "./components/SupportWidget";
 
 function App() {
   return (
